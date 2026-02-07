@@ -7,6 +7,14 @@ import{deliveryOptions} from'../data/deliveryOptions.js';
 const today=dayjs();
 const deliveryDate=today.add(7,'days');
 deliveryDate.format('dddd,MMMM D');
+
+
+function renderOrderSummary(){
+
+
+
+
+
 let cartSummaryHTML='';
 cart.forEach((cartItem)=>{
 
@@ -130,5 +138,9 @@ document.querySelectorAll('.js-delivery-option')
     element.addEventListener('click',()=>{
         const {productId,deliveryOptionId}=element.dataset;
         updateDeliveryOption(productId,deliveryOptionId);
+        renderOrderSummary();
     });
 });
+}
+
+renderOrderSummary();
