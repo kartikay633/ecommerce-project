@@ -29,7 +29,7 @@ export function getProduct(productId){
     }
       
     getPrice(){
-      return `₹${formatCurrency(this.priceCents)}`;
+      return `$${formatCurrency(this.priceCents)}`;
     }
 
     extraInfoHTML(){

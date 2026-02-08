@@ -93,7 +93,7 @@ function deliveryOptionsHTML(matchingProduct,cartItem){
             'dddd,MMMM D'
         );
             const isChecked=deliveryOption.id===cartItem.deliveryOptionId;
-        const priceString=deliveryOption.priceCents===0?'FREE':`₹${formatCurrency(deliveryOption.priceCents)} -`;
+        const priceString=deliveryOption.priceCents===0?'FREE':`$${formatCurrency(deliveryOption.priceCents)} -`;
         html+=
        ` <div class="delivery-option js-delivery-option"
        data-product-id="${matchingProduct.id}"
