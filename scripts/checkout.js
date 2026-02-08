@@ -5,17 +5,22 @@ import { loadCart } from '../data/cart.js';
 //import'../data/cart-class.js';
 //import'../data/backend-practice.js';
 async function loadPage(){
-    console.log('load page');
-    await loadProductsFetch();
 
-   const value =await new Promise((resolve)=>{
+    try{
+       // throw 'error1';
+        await loadProductsFetch();
+
+   const value =await new Promise((resolve,reject)=>{
+    throw 'error2';
         loadCart(()=>{
-            resolve('value3');
+            //reject('error3');
+           resolve('value3');
         });
     });
-        
-   
-
+    }catch(error){
+        console.log('Unexpected error. Please try again later.')
+    }
+  
      renderOrderSummary();
     renderPaymentSummary();
 
