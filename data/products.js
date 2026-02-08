@@ -136,7 +136,7 @@ export function getProduct(productId){
     xhr.send();
       
   }
-  loadProducts();
+  //loadProducts();
 
   /*
   
