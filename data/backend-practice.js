@@ -3,6 +3,6 @@ xhr.addEventListener('load',()=>{
    console.log( xhr.response);
 });
 
-xhr.open('GET', 'https://supersimplebackend.dev/not-supported');
+/*xhr.open('GET', 'https://supersimplebackend.dev/not-supported');
 xhr.send();
-xhr.response
+xhr.response*/
